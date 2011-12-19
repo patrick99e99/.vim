@@ -10,6 +10,14 @@ endif
 
 let g:colors_name = "Ichabod Crane"
 
+" Minibufexplorer colors
+" hi MBENormal ctermfg=235 ctermbg=NONE cterm=NONE
+" hi MBEChanged ctermfg=2 ctermbg=NONE cterm=NONE
+hi MBEVisibleNormal ctermfg=248 ctermbg=NONE cterm=NONE
+hi MBEVisibleActive ctermfg=15 ctermbg=57 cterm=NONE
+" hi MBEVisibleChanged ctermfg=5 ctermbg=NONE cterm=NONE
+" hi MBEVisibleChangedActive ctermfg=6 ctermbg=NONE cterm=NONE
+
 hi Cursor ctermfg=NONE ctermbg=15 cterm=NONE guifg=NONE guibg=#ffffff gui=NONE
 hi Visual ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#4a345f gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#191919 gui=NONE
@@ -22,9 +30,9 @@ hi StatusLine ctermfg=15 ctermbg=238 cterm=bold guifg=#ffffff guibg=#4a4a4a gui=
 hi StatusLineNC ctermfg=15 ctermbg=238 cterm=NONE guifg=#ffffff guibg=#4a4a4a gui=NONE
 hi Pmenu ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi PmenuSel ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#4a345f gui=NONE
-hi IncSearch ctermfg=NONE ctermbg=22 cterm=NONE guifg=NONE guibg=#005401 gui=NONE
-hi Search ctermfg=NONE ctermbg=22 cterm=NONE guifg=NONE guibg=#005401 gui=NONE
-hi Directory ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi IncSearch ctermfg=0 ctermbg=11 cterm=NONE guifg=NONE guibg=#005401 gui=NONE
+hi Search ctermfg=0 ctermbg=11 cterm=NONE guifg=NONE guibg=#005401 gui=NONE
+hi Directory ctermfg=21 ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi Folded ctermfg=NONE ctermbg=0 cterm=NONE guifg=NONE guibg=#000000 gui=NONE
 
 hi Normal ctermfg=15 ctermbg=0 cterm=NONE guifg=#ffffff guibg=#000000 gui=NONE
