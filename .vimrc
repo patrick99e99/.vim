@@ -103,8 +103,7 @@ set tabstop=2
 set shiftwidth=2
 set foldmethod=syntax
 set t_Co=256
-set number
 set ignorecase
 au BufRead,BufNewFile jquery.*.js,*.js.erb set ft=javascript syntax=jquery
-" au BufRead,BufNewFile *.js.erb set ft=javascript syntax=jquery
+au BufRead,BufNewFile *.rb,*.js,*.js.erb set number
 colorscheme ichabod_crane
