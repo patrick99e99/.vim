@@ -96,14 +96,20 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
-set nobackup
+call pathogen#infect()
+call pathogen#helptags()
 
+set nobackup
 set expandtab
 set tabstop=2
 set shiftwidth=2
 set foldmethod=syntax
 set t_Co=256
 set ignorecase
+set laststatus=2
+set statusline=%{fugitive#statusline()}
+
 au BufRead,BufNewFile jquery.*.js,*.js.erb set ft=javascript syntax=jquery
 au BufRead,BufNewFile *.rb,*.js,*.js.erb set number
+
 colorscheme ichabod_crane
