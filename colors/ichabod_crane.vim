@@ -26,7 +26,7 @@ hi ColorColumn ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#191919 gui=
 hi LineNr ctermfg=234 ctermbg=232 cterm=NONE guifg=#808080 guibg=#191919 gui=NONE
 hi VertSplit ctermfg=238 ctermbg=238 cterm=NONE guifg=#4a4a4a guibg=#4a4a4a gui=NONE
 hi MatchParen ctermfg=46 ctermbg=NONE cterm=NONE guifg=#00ff03 guibg=NONE gui=NONE
-hi StatusLine ctermfg=15 ctermbg=238 cterm=bold guifg=#ffffff guibg=#4a4a4a gui=bold
+hi StatusLine ctermfg=2 ctermbg=0 cterm=bold guifg=#ffffff guibg=#4a4a4a gui=bold
 hi StatusLineNC ctermfg=15 ctermbg=238 cterm=NONE guifg=#ffffff guibg=#4a4a4a gui=NONE
 hi Pmenu ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi PmenuSel ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#4a345f gui=NONE
@@ -77,6 +77,7 @@ hi rubyRegexp ctermfg=51 ctermbg=0 cterm=NONE guifg=#00fff1 guibg=#000000 gui=NO
 hi rubyRegexpDelimiter ctermfg=51 ctermbg=0 cterm=NONE guifg=#00fff1 guibg=#000000 gui=NONE
 hi rubyEscape ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi rubyControl ctermfg=21 ctermbg=NONE cterm=NONE guifg=#00ff03 guibg=NONE gui=NONE
+hi rubyDefine ctermfg=21 ctermbg=NONE cterm=NONE 
 hi rubyPredefinedVariable ctermfg=21 ctermbg=NONE cterm=NONE
 hi rubyInteger ctermfg=2 ctermbg=NONE cterm=NONE
 hi rubyClassVariable ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
