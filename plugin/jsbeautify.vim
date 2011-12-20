@@ -280,13 +280,13 @@ function! s:get_next_token()
 endfunction
 
 function! s:is_js()
-	return expand("%:e") == "js"
+	return match(expand("%:t"), '\.js\|\.js\.erb$') != -1
 endfunction
 
 "function! g:Jsbeautify(js_source_text, options)
 function! g:Jsbeautify()
 	if !s:is_js()
-		echo "Not a JS file."
+		echo expand("%:t") . " is not a JS file. "
 		return
 	endif
 
