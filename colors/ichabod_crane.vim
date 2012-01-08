@@ -10,13 +10,11 @@ endif
 
 let g:colors_name = "Ichabod Crane"
 
-" Minibufexplorer colors
-" hi MBENormal ctermfg=235 ctermbg=NONE cterm=NONE
-" hi MBEChanged ctermfg=2 ctermbg=NONE cterm=NONE
-hi MBEVisibleNormal ctermfg=248 ctermbg=NONE cterm=NONE
-hi MBEVisibleActive ctermfg=15 ctermbg=57 cterm=NONE
-" hi MBEVisibleChanged ctermfg=5 ctermbg=NONE cterm=NONE
-" hi MBEVisibleChangedActive ctermfg=6 ctermbg=NONE cterm=NONE
+hi TabLineFill ctermfg=234 ctermbg=234
+hi TabLine ctermfg=248 ctermbg=234
+hi TabLineSel ctermfg=15 ctermbg=57
+
+hi CommandTSelection ctermfg=129 ctermbg=234
 
 hi Cursor ctermfg=NONE ctermbg=15 cterm=NONE guifg=NONE guibg=#ffffff gui=NONE
 hi Visual ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#4a345f gui=NONE
