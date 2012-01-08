@@ -37,7 +37,7 @@ set incsearch		" do incremental searching
 " Don't use Ex mode, use Q for formatting
 map Q gq
 map <leader><cr> :noh<cr>
-map <leader>d :NERDTree<cr>
+map <leader>d :NERDTreeToggle<cr>
 map <C-l> :tabn<CR>
 map <C-h> :tabp<CR>
 map <C-n> :tabnew<CR>
@@ -117,3 +117,5 @@ au BufRead,BufNewFile jquery.*.js,*.js.erb set ft=javascript syntax=jquery
 au BufRead,BufNewFile *.rb,*.js,*.js.erb set number
 
 colorscheme ichabod_crane
+
+let g:NERDTreeMapHelp = 'H'
