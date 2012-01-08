@@ -37,7 +37,10 @@ set incsearch		" do incremental searching
 " Don't use Ex mode, use Q for formatting
 map Q gq
 map <leader><cr> :noh<cr>
-map <leader>w <C-w>k<tab><cr><C-w>j 
+map <leader>d :NERDTree<cr>
+map <C-l> :tabn<CR>
+map <C-h> :tabp<CR>
+map <C-n> :tabnew<CR>
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
