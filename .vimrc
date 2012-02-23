@@ -36,11 +36,13 @@ set incsearch		" do incremental searching
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
-map <leader><cr> :noh<cr>
-map <leader>d :NERDTreeToggle<cr>
+map <leader><cr> :noh<CR>
+map <leader>d :NERDTreeToggle<CR>
 map <C-l> :tabn<CR>
 map <C-h> :tabp<CR>
 map <C-n> :tabnew<CR>
+map <leader>f :echo @%<CR>
+map W f_
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
@@ -107,7 +109,8 @@ set nobackup
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set foldmethod=syntax
+" set foldmethod=syntax
+set nowrap
 set t_Co=256
 set ignorecase
 set laststatus=2
