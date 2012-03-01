@@ -43,6 +43,7 @@ map <C-h> :tabp<CR>
 map <C-n> :tabnew<CR>
 map <leader>f :echo @%<CR>
 map W f_
+map <C-t> :TlistToggle<cr>
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
@@ -102,9 +103,6 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
-call pathogen#infect()
-call pathogen#helptags()
-
 set nobackup
 set expandtab
 set tabstop=2
@@ -114,7 +112,6 @@ set nowrap
 set t_Co=256
 set ignorecase
 set laststatus=2
-set statusline=%{fugitive#statusline()}
 
 au BufRead,BufNewFile jquery.*.js,*.js.erb set ft=javascript syntax=jquery
 au BufRead,BufNewFile *.rb,*.js,*.js.erb set number
@@ -122,3 +119,39 @@ au BufRead,BufNewFile *.rb,*.js,*.js.erb set number
 colorscheme ichabod_crane
 
 let g:NERDTreeMapHelp = 'H'
+
+" Vundle settings
+
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" Plugins
+Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'godlygeek/tabular'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-fugitive'
+Bundle 'vim-scripts/taglist.vim'
+
+filetype plugin indent on     " required! 
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+
+set statusline=%{fugitive#statusline()}
+
+let Tlist_Ctags_Cmd = "~/bin/ctags"
+let Tlist_WinWidth = 50
+

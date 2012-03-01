@@ -1,1 +1,4 @@
-.netwrhist
+.netrwhist
+**/.netrwhist
+bundle/*
+!bundle/vundle
