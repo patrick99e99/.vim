@@ -34,6 +34,9 @@ set incsearch		" do incremental searching
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
 
+let g:jsbeautify_file = fnameescape(fnamemodify(expand("<sfile>"), ":h")."/bundle/js-beautify/beautify.js")
+let g:jsbeautify = {"indent_size": 4, "indent_char": "\t"} 
+
 " Don't use Ex mode, use Q for formatting
 map Q gq
 map <leader><cr> :noh<CR>
@@ -44,6 +47,7 @@ map <C-n> :tabnew<CR>
 map <leader>f :echo @%<CR>
 map W f_
 map <C-t> :TlistToggle<cr>
+map <C-f> :call JsBeautify()<cr>
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
@@ -116,6 +120,23 @@ set laststatus=2
 au BufRead,BufNewFile jquery.*.js,*.js.erb set ft=javascript syntax=jquery
 au BufRead,BufNewFile *.rb,*.js,*.js.erb set number
 
+" Ruby
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
+" PHP
+autocmd FileType php setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+
+" X?HTML & XML
+autocmd FileType html,xhtml,xml setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
+" CSS
+autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+
+" JavaScript
+" autocmd BufRead,BufNewFile *.json setfiletype javascript
+autocmd FileType javascript setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+let javascript_enable_domhtmlcss=1
+
 colorscheme ichabod_crane
 
 let g:NERDTreeMapHelp = 'H'
@@ -138,6 +159,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/taglist.vim'
+Bundle 'https://github.com/vim-scripts/jsbeautify.git'
 
 filetype plugin indent on     " required! 
 "
@@ -154,4 +176,15 @@ set statusline=%{fugitive#statusline()}
 
 let Tlist_Ctags_Cmd = "~/bin/ctags"
 let Tlist_WinWidth = 50
+
+function! RunSpec(args)
+ let cmd = ":! rspec % -cfn " . a:args
+ execute cmd
+endfunction
+ 
+" Mappings
+" run one rspec example or describe block based on cursor position
+map !s :call RunSpec("-l " . <C-r>=line('.')<CR>)
+" run full rspec file
+map !S :call RunSpec("")<CR>
 
